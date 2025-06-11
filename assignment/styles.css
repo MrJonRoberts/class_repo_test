@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&family=Coiny&display=swap");
+
+/* --- page-level layout --------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+
+  /* make the page a flex column that fills the viewport */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- header -------------------------------------------------------------- */
+header {
+  height: 80px;
+  line-height: 80px;          /* centres the text vertically */
+  text-align: center;
+  background: rgb(33, 35, 72);
+  color: #fff;
+  font-family: "Coiny", system-ui;
+  font-size: 2.5rem;
+}
+
+/* --- navigation ---------------------------------------------------------- */
+nav ul {
+  display: flex;               /* horizontal menu */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #333;
+}
+
+nav li a {
+  display: block;
+  padding: 0 1.2rem;
+  line-height: 40px;           /* matches nav height */
+  color: #fff;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background: #111;
+}
+
+/* --- main content -------------------------------------------------------- */
+main {
+  flex: 1 1 auto;              /* fills remaining height, shrinks/grows */
+  padding: 1rem;
+  background: #e9f9ff;
+  overflow-y: auto;            /* scroll only if needed */
+}
+
+/* --- footer -------------------------------------------------------------- */
+footer {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: limegreen;
+  color: #000;
+  flex-shrink: 0;              /* don’t let flexbox reduce its height */
+}
