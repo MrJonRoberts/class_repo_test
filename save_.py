@@ -58,7 +58,7 @@ def commit_and_push(message: str, branch: str):
         capture_output=True, text=True
     )
     if result.returncode != 0:
-        print(f"RT: {result.returncode}")
+        print(f"RT: {result.stderr}")
         if "nothing to commit" in result.stderr.lower():
             print("ℹ️  Nothing to commit.")
             return
